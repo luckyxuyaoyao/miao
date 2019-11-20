@@ -39,7 +39,9 @@
   <hr>
   <marquee behavior="" direction="left">飘~~~</marquee>
 
-  <p>这几种强调<b>有什么区别呢？</b> <u>这个呢？</u><em>这个呢？</em></p>
+  <em>这几种强调</em> <strong>有什么</strong> &nbsp; <b>区别呢？</b> <u>这个呢？</u>这个呢？
+  <hr>
+  &lt;!-- 这段注释需要出现在页面里面 -->
 
   <p>html的注释怎么写？</p>
   <p>下面是一段javascript代码，最合适用何种标签表示呢？</p>
@@ -88,44 +90,48 @@
 
   <form action="https://google.com/search" target="_black">
     <h2>Google搜索</h2>
-  
-  <input type="text" name="q">
-  <button>在新窗口打开搜索结果</button>
- </form>
+
+    <input type="text" name="q" placeholder="请输入想要搜索的内容">
+    <button>在新窗口打开搜索结果</button>
+  </form>
   <hr>
   <p>个人信息调查表</p>
+
   <dl>
     <dt>性别</dt>
     <dd>
-      <inpute type="radio">男     
-    </dd>
-    <dd>
-    <inpute type="radio" name="gender">女
+      <inpute type="radio" name="gender">男
     </dd>
 
-      <dt>年龄</dt>
-      <select name="age">
-          <optgroup label="少年">
-            <option value="">
-            <option>1-6岁</option>
-            <option>6-12岁</option>
-            </option>
-          </optgroup>
-  
-          <optgroup label="青年">
-            <option value="">
-            <option>13-15岁</option>
-            <option>16-18岁</option>
-            </option>
-          </optgroup>
-  
-          <optgroup label="壮年">
-            <option value="">
-            <option>18-22岁</option>
-            <option>23-30岁</option>
-            </option>
-          </optgroup>
-        </select>
+    <dd>
+      <inpute type="radio" name="gender">女
+    </dd>
+
+
+    <dt>年龄</dt>
+    <select name="age">
+      <option value="" hidden>请选择</option>
+      <optgroup label="少年">
+        <option value="">
+        <option>1-6岁</option>
+        <option>6-12岁</option>
+        </option>
+      </optgroup>
+
+      <optgroup label="青年">
+        <option value="">
+        <option>13-15岁</option>
+        <option>16-18岁</option>
+        </option>
+      </optgroup>
+
+      <optgroup label="壮年">
+        <option value="">
+        <option>18-22岁</option>
+        <option>23-30岁</option>
+        </option>
+      </optgroup>
+    </select>
 
     <dt>生日</dt>
     <input type="date">
@@ -136,53 +142,79 @@
     <dt>肤色</dt>
     <input type="color">
 
-      <dt>自我介绍</dt>
-      <dd>
-        <textarea rows="" cols=""></textarea>
-      </dd>
-    </dl>
+    <dt>自我介绍</dt>
+    <dd>
+      <textarea rows="10" cols="30"></textarea>
+    </dd>
+  </dl>
 
-      <hr>
-      <table border="1">
-        <caption>货品列表</caption>
-        <thead>
-          <tr>
-            <th>编号</th>
-            <th>品名</th>
-            <th>进价</th>
-            <th>出价</th>
-          </tr>
-          <tr>
-            <th>001</th>
-            <th>苹果</th>
-            <th>5</th>
-            <th>8</th>
-          </tr>
-          <tr>
-            <th>001</th>
-            <th>桔子</th>
-            <th>5</th>
-            <th>8</th>
-          </tr>
-          <tr>
-            <th>001</th>
-            <th>香蕉</th>
-            <th>5</th>
-            <th>8</th>
-          </tr>
-          <tr>
-            <th>001</th>
-            <th>山竹</th>
-            <th>5</th>
-            <th>8</th>
-          </tr>
+  <hr>
+  <table border="1">
+    <caption>货品列表</caption>
+    <colgroup>
+      <col>
+      <col bgcolor="red">
+    </colgroup>
 
-        </thead>
-      </table>
+    <thead>
+      <tr>
+        <th>编号</th>
+        <th>品名</th>
+        <th>进价</th>
+        <th>出价</th>
+      </tr>
+      <tr>
+        <th>001</th>
+        <th>苹果</th>
+        <th rowspan="2">5</th>
+        <th>8</th>
+      </tr>
+      <tr>
+        <th>001</th>
+        <th>桔子</th>
+        <th>8</th>
+      </tr>
+      <tr>
+        <th>001</th>
+        <th>香蕉</th>
+        <th>5</th>
+        <th>8</th>
+      </tr>
+      <tr>
+        <th>001</th>
+        <th>山竹</th>
+        <th>5</th>
+        <th>8</th>
+      </tr>
 
-      <input>
-      <div id="bottom"></div>
+    </thead>
+  </table>
 
+  <hr>
+
+  <img src="https://drscdn.500px.org/photo/174778125/m%3D1170_k%3D1/2841ccf2a3720e8e794a6a6930f6ff2c" width="300"
+    height="450" usemap="#qwe">
+
+  <map name="qwe">
+    <area shape="rect" coords="55,85,200,190" href="https://www.mi.com/" target="_black">
+    <area shape="circle" coords="132,262,90" href="#">
+    <area shape="poly" coords="10,268,58,82,192,82,225,260,165,400" href="">
+  </map>
+  <hr>
+
+  <a href="https://www.mi.com" target="nnn">点击我会在下面的frame里打开小米商场，但为什么打不开呢？</a>
+  <iframe src="https://taobao.com/" name="nnn">
+  </iframe>
+  <p>怎样&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在这两个字之间空这么大呢？</p>
+  <p>怎样在页面中显示下面的内容呢？</p>
+     <p> &lt; span> &lt;/span></p>
+
+
+
+
+
+
+  <div id="bottom"></div>
 </body>
 
 </html>

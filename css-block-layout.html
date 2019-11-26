@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Document</title>
+  <style>
+    .zxc {
+      margin-left: auto;
+      margin-right: auto;
+      width: 600px;
+      text-align: center;
+
+    }
+
+    header {
+      background-color: black;
+      margin-top: -16px;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+
+    .p1 {
+      color: white;
+      text-align: center;
+      margin-left: 0px;
+
+    }
+
+    .p2 {
+      display: block;
+      width: 600px;
+      margin-left: 0px;
+      text-indent: -4px;
+
+    }
+
+    .p3 {
+      border-bottom: dashed 0.5px;
+      width: 600px;
+      text-align: left;
+    }
+
+    .p4 {
+      border-bottom-color: white;
+      text-align: left;
+
+    }
+
+    .p5 {
+      background-color: rgb(238, 138, 238);
+      margin:auto;
+    }
+
+    #d1>div {
+      box-sizing: border-box;
+      border: black solid 3px;
+      width: 180px;
+      height: 40px;
+      background-color: pink;
+      margin-top: 15px;
+    }
+
+    #d1>div:hover {
+      background-color: red;
+    }
+
+    #d1>div:nth-child(n+5):nth-last-child(n+5){
+      margin-left: 210px;
+    }
+
+    div:nth-child(n+9):nth-last-child(n+1) {
+      margin-left: 420px;
+     
+    }
+
+    #d1>div:nth-child(5) {
+
+      margin-top: -205px;
+    }
+
+    #d1>div:nth-child(9){
+      margin-top: -205px;
+    }
+
+    /* div {
+      border: black solid 3px;
+      width: 174px;
+      height: 34px;
+      background-color: pink;
+      margin-left: 0px;
+      margin-top: 0px;
+
+    }
+
+    div:hover {
+      background-color: red;
+    } */
+
+
+    /* div:nth-child(3n+1) {
+
+      margin-top: 15px;
+      margin-right: 0px;
+      text-align: center;
+
+    }
+
+    div:nth-child(3n+2) {
+      margin-left: 210px;
+      margin-top: -40px;
+      margin-right: 0px;
+      text-align: center;
+    }
+
+    div:nth-child(3n+3) {
+      margin-left: 420px;
+      margin-top: -40px;
+      margin-bottom: 20px;
+      text-align: center;
+    } */
+  </style>
+
+</head>
+
+<body style="">
+  <div class="zxc">
+    <header>
+      <p class="p1">hello world 请调整浏览器窗口大小查看效果</p>
+    </header>
+    <p class="p2">页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体
+      宽度600px
+      页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体
+      宽度600px
+      页面主体 宽度600px</p>
+    <div id="d1">
+      <div>宽180高40(包含边框)</div>
+      <div>水平间隙30px</div>
+      <div>垂直间隙15px</div>
+      <div>边框宽度3px</div>
+      <div>产品</div>
+      <div>产品</div>
+      <div>产品</div>
+      <div>产品</div>
+      <div>产品</div>
+      <div>产品</div>
+      <div>产品</div>
+      <div>产品</div>
+    </div>
+
+    <p class="p3">link</p>
+    <p class="p3">link</p>
+    <p class="p3">link</p>
+    <p class="p3">link</p>
+    <p class="p3 p4">link</p>
+    <p class="p5">©版权所有<br>本页所有布局均使用块元素</p>
+  </div>
+</body>
+
+</html>

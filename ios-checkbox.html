@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+       * {
+        margin: 0;
+        padding: 0;
+        background-color:  rgba(0,0,0,0.08)
+    }
+        div {
+            border-radius: 25% / 50%;
+            border: 2px solid #CBCBCB;
+            background-color: #30F349;
+            width: 280px;
+            height: 150px;
+            
+        }
+input+label{
+  width: 150px;
+        height: 140px;
+        border: 1px solid;
+        border-radius: 75px; 
+        border-color: white;
+        position: absolute;
+          background-color: #fff;
+        z-index: 10;    
+  
+}
+input:checkbox+label::before{
+   content:"√"; 
+  width: 150px;
+        height: 140px;
+        border: 1px solid;
+        border-radius: 75px; 
+        border-color: white;
+        position:
+          background-color: #fff;
+        z-index: 10; 
+  
+  
+  
+}
+
+
+        
+    </style>
+</head>
+
+<body>
+    
+        <div>
+                <input type="checkbox" name="" id="ck">
+                <label for="ck"></label>
+                 
+                </div>
+
+</body>
+
+</html>

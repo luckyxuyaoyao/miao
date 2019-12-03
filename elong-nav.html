@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <style>
+        div {
+            display: inline-block;
+            background-color: #2064C8;
+            color: white;
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+            border-right: 1px solid;
+            padding-right: 10px;
+            margin-left: 10px;
+
+        }
+
+        .a>div:nth-last-child(1) {
+            border-right: none;
+        }
+
+        .a {
+            min-width: 500px;
+            width: 100%;
+            margin-left: -9px;
+            margin-top: 30px;
+        }
+        .a>div:nth-child(4)::before  {
+            content: "低价促";
+            font-size: 12px;
+            background-color:#FF8E00;
+            position: absolute;
+            margin-top: -10px;
+            margin-left: -25px;
+            line-height: 18px;
+       }
+       .a>div:nth-child(3)::after  {
+            content: "";   
+            border:2px solid  #FF8E00 ;
+            position: absolute;
+            z-index: 10;
+            border-color:  #FF8E00 transparent transparent  #FF8E00;
+            left:42px;
+            bottom: 10px;
+           
+     
+            
+       }
+
+
+        .a>div:nth-child(4)::after  {
+            content: "新升级";
+            font-size: 12px;
+            background-color:#FF8E00;
+            position: absolute;
+            margin-top: -10px;
+            margin-left: -43px;
+            line-height: 18px;
+           
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="a">
+
+        <div>首页</div>
+        <div>国内酒店</div>
+        <div>海外酒店</div>
+        <div  data-tips="低价促" data-tips="新升级">国内·国际机票</div>
+        <div>火车票</div>
+        <div>汽车票</div>
+        <div>商旅</div>
+
+    </div>
+</body>
+
+</html>

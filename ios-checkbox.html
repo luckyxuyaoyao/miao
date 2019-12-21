@@ -1,58 +1,107 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  
-<style>
-*{
-  background-color：rgba(0,0,0,0.1);
-}
+
+  <style>
+    * {
+      background-color：rgba(0, 0, 0, 0.1);
+    }
 
 
-input{
-  xdisplay:none;
-  
-}
-input + label{
-  display:inline-block;
-  width: 270px;
-  height: 155px;
-  border:3px solid #cbcbcb;
-  box-sizing:border-box;
-  border-radius:115px;
-  transition:.3s; /* jianbian */
-  position:relative;
-  padding:6px;
-}
-input:checked+label{
-  background-color: #30f349;
-  border-color:#30f349
-}
-input+label::before{
-  content:'';
-  width: 133px;
-  height: 133px;
-  box-shadow:0 0 15px gray;
-  display: inline-block;
-  background-color: white;
-  border-radius:115px;
-  transition:.3s;
-  left:0;
-  
-}
-input:checked+label::before{
-  margin-left:115px;
-  right:0;
-  
-}
-</style>
+    .aaa+.bbb {
+      display: inline-block;
+      width: 270px;
+      height: 155px;
+      border: 3px solid #cbcbcb;
+      box-sizing: border-box;
+      border-radius: 115px;
+      transition: .3s;
+      /* jianbian */
+      position: relative;
+      padding: 6px;
+    }
+
+    .aaa:checked+.bbb {
+      background-color: #30f349;
+      border-color: #30f349
+    }
+
+    .aaa+.bbb::before {
+      content: '';
+      width: 133px;
+      height: 133px;
+      box-shadow: 0 0 15px gray;
+      display: inline-block;
+      background-color: white;
+      border-radius: 115px;
+      transition: .3s;
+      position: absolute;
+      left: 0;
+
+    }
+
+    .aaa:checked+.bbb::before {
+      margin-left: 115px;
+      right: 0;
+
+
+    }
+    .abc{
+      margin-top: 30px;
+      margin-left: 20px;
+      padding: 60px;
+      width: 250px;
+      height: 250px;
+      line-height: 85px;
+      border: 1px solid;     
+      font-size: 25px;
+    
+    }
+   .abc>input{
+     display: none;
+   }
+    .abc>label::before{
+      content: "";
+      display: inline-block;
+     width: 40px;
+     height: 40px;
+     border: 2px solid black;
+     border-radius: 40px;
+   }
+   .abc>label:checked{
+     content: "";
+    color: #03BD5E;   
+     border-radius: 30px;
+      display: inline-block;
+      position: absolute;
+    
+   }
+
+   .abc>input+label{
+
+   }
+
+
+
+
+    
+  </style>
 </head>
+
 <body>
-  <input type="checkbox" name="" id="up">
- <label for="up"></label>
-<!-- <button><Span>
-  
-</Span></button> -->
+  <input type="checkbox" class="aaa" name="" id="up">
+  <label for="up" class="bbb"></label>
+  <div class="abc">
+    <input type="checkbox" id="aa">
+    <label for="aa">Radio Button</label>
+    <input type="checkbox" id="bb">
+    <label for="bb">Radio Button</label>
+    <input type="checkbox" id="cc">
+    <label for="cc">Radio Button</label>
+  </div>
 </body>
+
 </html>

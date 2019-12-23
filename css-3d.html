@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .contaier{
+        perspective: 800px;
+    }
+    .box{
+        transform-style: preserve-3d;
+        width: 660px;
+        height: 660px;
+        position: relative;
+        animation: foo 5s infinite alternate;       
+    }
+    .box div{
+        width: 200px;
+        height: 200px; 
+        left:25%;
+        top:25%;    
+        position: absolute;
+        text-align: center;
+        transform-origin: center;
+        border: indigo 1px;    
+        transform: translate(-50% , -50%);
+        opacity: 0.5;
+    }
+    
+    @keyframes foo{
+        from{
+            transform:rotatex(0) rotatey(0);
+        }
+        to{
+            transform:rotatex(360deg) rotatey(360deg) rotateZ(360deg);
+        }
+    }
+    .box >div:nth-child(1){
+        transform:translatez(100px);
+        background-color:indigo;
+    }
+    .box >div:nth-child(2){
+        transform:translatez(-100px);
+        background-color:lawngreen;
+    }
+    .box >div:nth-child(3){
+        transform:rotatex(90deg) translatez(-100px);
+        background-color:lightsalmon;
+    }
+    .box >div:nth-child(4){
+        transform:rotatex(90deg) translatez(100px);
+        background-color: maroon;
+    }
+    .box >div:nth-child(5){
+        transform:rotatey(90deg) translatez(100px);
+        background-color: orangered;
+    }
+    .box >div:nth-child(6){
+        transform:rotatey(90deg) translatez(-100px);
+        background-color:tomato;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <main class="box">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>           
+        </main>
+    </div>
+</body>
+</html>

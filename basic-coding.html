@@ -9,7 +9,7 @@
         var A=+prompt()
         var B=+prompt()
         var plus=A+B 
-        console.log('两数之和为'+plus)
+        console.log(plus)
     </script>
 
     <script type="xx" id="ch0103/02">
@@ -24,7 +24,7 @@
         var a=+prompt()
         var b=+prompt()
         var c=+prompt()
-        var res=(a+b)/c
+        var res=Math.floor((a+b)/c)
         console.log(res)
     </script>
 
@@ -70,15 +70,17 @@
         console.log(C)
     </script>
 
-    <script type="XX" id="ch0103/09">
+    <script type="" id="ch0103/09">
         var r=+prompt()
         var R=2*r
-        var C=2*3.1415926*r
+        var C=2*3.14159*r
         var S=3.1415926*r*r 
         var R=R.toFixed(4)
         var C=C.toFixed(4)
         var S=S.toFixed(4)
-        console.log(R,C,S)
+        console.log(R)
+        console.log(C)
+        console.log(S)
     </script>
 
     <script type="xx" id="ch0103/10">
@@ -128,8 +130,10 @@
     </script>
 
     <script type="xx" id="ch0103/16">
-       var x1,y1=+prompt()      
-       var x2,y2=+prompt()     
+       var x1=+prompt() 
+       var y1=+prompt()      
+       var x2=+prompt() 
+       var y2=+prompt()     
        var d=Math.sqrt((x1-x2)^2+(y1-y2)^2)
        var d=d.toFixed(3)
        console.log(d)

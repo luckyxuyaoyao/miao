@@ -872,46 +872,137 @@
 
     <script type="xx" id="ch0105/34">
         var n = +prompt(),
-            a = 2, sn = 0         
-        for(i=1;i<n;i++){
-            a = a * (a-1)
-            sn += a
-            a++  
+            a = 1,b = 1,e = 0
+        for(i = 0; i < n; i++){
+            a = a * b
+            e += a
+            b+=1
         }
-        console.log(sn)
-        if(n==1){
-            sn=1
-            console.log(sn)    
-        } 
+        console.log(e) 
     </script>
 
-    <script type="" id="ch0105/35">
-        
+    <script type="xx" id="ch0105/35">
+        var n = +prompt(),
+            a = 1,b = 1,e = 1
+        for(i = 0; i < n; i++){
+            a = a * b
+            e += 1/a
+            b+=1
+        }
+        console.log(e.toFixed(10))
     </script>
 
-    <script type="" id="ch0105/36">
-         
+    <script type="xx" id="ch0105/36">
+        var x = +prompt(),
+            n = +prompt(),
+            a, b = 1
+        for(i = 0; i < n; i++){
+            a = Math.pow(x,i+1)
+            b = b + a 
+        }
+        console.log(b.toFixed(2))
+
+  
     </script>
 
     <script type="" id="ch0105/37">
+       
+    </script>
+
+    <script type="xx" id="ch0105/38">
+        var n = +prompt(),
+            a=0,b 
+        for(i=n+1;i>0;i--){ 
+            Ci = +prompt()
+            a += Ci
+            if(a==0){
+            console.log(0)
+            }else { 
+                if(i>1){
+                b = Ci * (i-1)
+                console.log(b)
+                }           
+            }
+        }
+    </script>
+
+     <script type="xx" id="ch0105/39">
+       
+
+    </script>
+
+    <script type="xx" id="ch0105/40">
+        var n = +prompt(),
+            sum = 0
+        for(i=0;i<=n;i++){
+            a = i % 10,
+            b = (i - a) / 10,
+            c = (i - a - b*10) / 100,
+            d = (i - a - b*10 - c * 100) / 1000,
+            e = (i - a - b*10 - c * 100 - d * 1000) / 10000
+            switch (i>=1) {
+                case a==1:
+                    sum += 1;
+                    break;
+                case b==1:
+                    sum += 1;
+                    break;
+                case c==1:
+                    sum += 1;
+                    break;
+                case d==1:
+                    sum += 1;
+                    break;
+                case e==1:
+                    sum += 1;
+                    break;
+                default:
+                    break;
+            }
+        }
+        console.log(sum)
+    </script>
+
+    <script type="xx" id="ch0105/41">
+        var m = +prompt(),
+            n = +prompt(),
+            count = 0
+        for(i=m;i<=n;i++){
+            var str = i
+            while(str>0){
+                if(str % 10 == 2){
+                    count++
+                }
+                str = Math.trunc(str/10)
+            }
+        }
+        console.log(count)
+    </script>
+
+    <script type="" id="ch0105/42">
+        var m = +prompt(),
+            n = +prompt(),
+            a = prompt(),
+            b = prompt()
+        while(b=1){
+            for(i=1;i<m;i++){
+                console.log('a')
+                for(j=1;j<n;j++){
+                    console.log('a')
+                }
+            }
+        }
+
+    </script>
+
+    <script type="" id="ch0105/43">
          
     </script>
 
-    <script type="" id="ch0105/38">
+    <script type="" id="ch0105/44">
          
     </script>
 
-     <script type="" id="ch0105/39">
-         
-    </script>
-
-    <script type="" id="ch0105/40">
-         
-    </script>
-
-    <script type="" id="ch0105/41">
-         
-    </script>
 
     <script type="xx" id="ch0105/45">
         var n = +prompt(),

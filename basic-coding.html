@@ -198,7 +198,7 @@
         }
     </script>
 
-    <script type="" id="ch0104/04">
+    <script type="xx" id="ch0104/04">
         var n = prompt()
         if(n.charCodeAt(0) % 2 == 0){
             console.log('No')
@@ -1033,7 +1033,7 @@
         console.log(sum)
     </script>
 
-    <script type="" id="7">
+    <script type="xx" id="7">
         var n = + prompt(),
             a = n % 10,
             b = Math.trunc(n/10) % 10,
@@ -1093,7 +1093,7 @@
         } 
     </script>
 
-      <script type="x" id="palindrom">
+    <script type="x" id="palindrom">
         var n = Number(prompt());
         var res = [], count = 0;
         while(n)
@@ -1115,9 +1115,9 @@
         if(flag) console.log("YES");
         else console.log("NO");
       
-      </script>
+    </script>
       
-      <script type="x" id="complete-number">
+    <script type="x" id="complete-number">
         var n = Number(prompt());
         var sum = 1;
         for(var i = 2; i <= Math.sqrt(n); i ++)
@@ -1130,9 +1130,9 @@
         }
         if(sum == n) console.log("YES");
         else console.log("NO");
-      </script>
+    </script>
       
-      <script type="x" id="complete-numbers">
+    <script type="x" id="complete-numbers">
         for(var j = 2; j <= 1000; j ++)
         {
           var sum = 1, tmp = j;
@@ -1145,9 +1145,9 @@
           }
           if(sum == j) console.log(j);
         }
-      </script>
+    </script>
       
-      <script type="x" id="prime">
+    <script type="x" id="prime">
         var n = Number(prompt());
         var flag = true;
         if(n == 1) flag = false;
@@ -1160,9 +1160,9 @@
         }
         if(flag) console.log("YES");
         else console.log("NO");
-      </script>
+    </script>
       
-      <script type="x" id="primes">
+    <script type="x" id="primes">
         console.log(2);
         for(var j = 3; j <=100 ; j += 2)
         {
@@ -1176,9 +1176,9 @@
           }
           if(flag) console.log(j);
         }
-      </script>
+    </script>
       
-      <script type="x" id="sqrt">
+    <script type="x" id="sqrt">
         var num = Number(prompt());
         var start = 0, end = num;
         var mid = 0, flag = true;
@@ -1194,31 +1194,42 @@
         }
         console.log(start.toFixed(3));
       
-      </script>
+    </script>
       
-      <script type="x" id="itob">
+    <script type="x" id="itob">
         var n = Number(prompt());
         var res = "";
         res = n.toString();
         console.log(res);
-      </script>
-      
+    </script>
+
+    <script type="" id="lcf&lcm:">
+        var m = +prompt(),
+            n = +prompt(), a
+            x = Math.max(m,n)
+            y = Math.min(m,n)
+        while(x > y && y != 0){
+            x = x - y
+            if(x < y){
+                a = y 
+                y = x 
+                x = a
+            }
+            if(x == y){
+                console.log('最大公约数='+x)
+                break
+            }
+        }
+        if(y==0){
+            console.log('最大公约数='+0)
+        }
+        console.log('最小公倍数='+m*n/x)
+
+    </script>
 
     
     
  
-
-
-
-
-
-
-
-
-
-
-
-
 
 </head>
 <body>

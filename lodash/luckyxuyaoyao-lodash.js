@@ -11,6 +11,7 @@ var luckyxuyaoyao = {
             return false
         }
     },
+
     /**
      * 
      * @param {*} val 
@@ -23,7 +24,7 @@ var luckyxuyaoyao = {
         }
     },
 
-    /**
+     /**
      * @param {*} array
      * @param {*} size
      */
@@ -35,7 +36,28 @@ var luckyxuyaoyao = {
         return ary
     },
 
+    /**
+     * @param {*} array
+     */
+    compact:function(array){
+        let res = []
+        for(var i = 0; i < array.length; i++){
+            if(array[i] !== '0'|| array[i] !== 'null' || array[i] !== 'undefined' || array[i] !== 'NaN' || array[i] !== '' || array[i] !== 'false'){
+                res.push(array[i])
+            }
+        }
+        return res 
+    },
+
+   
+
+
+    
 }
+
+
+
+
 
 
 

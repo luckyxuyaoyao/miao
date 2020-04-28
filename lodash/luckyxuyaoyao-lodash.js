@@ -5,7 +5,7 @@ var luckyxuyaoyao = {
      * @param {*} val 
      */
     isNull:function(val){
-        if(val == null){
+        if(val == null || val == undefined){
             return true
         }else{
             return false
@@ -22,4 +22,23 @@ var luckyxuyaoyao = {
             return false
         }
     },
+
+    /**
+     * @param {*} array
+     * @param {*} size
+     */
+    chunk:function(array,size){
+        let ary = []
+        for(var i = 0; i < array.length; i++){
+            ary.push(array.slice(i,i+size))
+        }
+        return ary
+    },
+
 }
+
+
+
+
+
+

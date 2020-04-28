@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
 <script src="lodash.js"></script>
 <script>
     var luckyxuyaoyao = {
@@ -9,7 +13,7 @@
                 return false
             }
         },
-        
+
         isNaN:function(val){
             if(val !== val){
                 return true
@@ -21,4 +25,6 @@
 
     }
 
-</script>
+</script> 
+</body>
+</html>

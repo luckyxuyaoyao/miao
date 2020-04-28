@@ -1,6 +1,9 @@
 
 var luckyxuyaoyao = {
-    
+    /**
+     * 
+     * @param {*} val 
+     */
     isNull:function(val){
         if(val == null){
             return true
@@ -8,7 +11,10 @@ var luckyxuyaoyao = {
             return false
         }
     },
-
+    /**
+     * 
+     * @param {*} val 
+     */
     isNaN:function(val){
         if(val !== val){
             return true
@@ -16,6 +22,4 @@ var luckyxuyaoyao = {
             return false
         }
     },
-
-
 }

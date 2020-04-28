@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>哈罗布局</title>
+    <style>
+    
+.hero{
+  height: 780px;
+ 
+}
+.hero-content{
+  max-width: 1040px;
+  height: 100%;
+  margin:auto;
+  background-color: violet;
+ 
+}
+ul{
+  list-style-type:none;
+  padding:0;
+  margin:0;
+  overflow:hidden;
+}
+li{
+  margin:1px;
+  height: 260px;
+  width: calc(25% - 2px);
+  float:left;
+  border:1 solid white;
+  background-color: yellow;
+
+}
+@media(max-width:1070px){
+  .hero{
+    height: 445px;
+  }
+  li{
+    width: calc(50% - 2px);
+  }
+ 
+}
+@media(max-width:625px){
+  li{
+    width:calc(100% - 2px);
+  }
+}
+
+    </style>
+</head>
+<body>
+    <div>
+        <div class="hero">
+          <div class="hero-content">
+            
+          </div>
+        </div>
+        <ul>
+          <li>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam cumque tenetur amet in quidem ut animi laboriosam quisquam doloremque. Sit deleniti ducimus officiis ab, pariatur adipisci blanditiis, magnam nesciunt accusamus.</li>
+          <li>2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat reiciendis itaque enim repellat delectus maxime, sapiente ullam voluptate eos veritatis ipsa sequi quam quaerat quidem natus, eius repudiandae tenetur ratione.</li>
+          <li>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus consequuntur eveniet qui at fuga quam odit vel, minima repellendus quod dolorem nostrum debitis, sit dolor. Voluptatem pariatur ab, at!</li>
+          <li>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit asperiores aspernatur quasi consequuntur maiores, quia veniam vel aperiam, alias magni beatae, sed optio. Aliquid obcaecati pariatur porro sed tempore repellendus.</li>
+        </ul>
+        
+      </div>
+</body>
+</html>

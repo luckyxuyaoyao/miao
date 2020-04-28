@@ -784,7 +784,7 @@
             }   
     </script>
 
-    <script type="aa" id="ch0105/29">
+    <script type="" id="ch0105/29">
         var n = +prompt()
         var result = 0
         var sign = 1
@@ -1196,11 +1196,36 @@
       
     </script>
       
-    <script type="x" id="itob">
-        var n = Number(prompt());
-        var res = "";
-        res = n.toString();
-        console.log(res);
+    <script type="xx" id="itob">
+        // var n = Number(prompt());
+        // var res = "";
+        // res = n.toString();
+        // console.log(res);
+        function itob(n){
+            var result = ''
+            while (n > 0){
+                var digit = n % 10
+                result = digitToChar(digit) + result
+                n =  (n - digit)/10
+            }
+            return result
+        }
+        //将一个一位的数转换为其对应的数字
+        function digitToChar(n){
+            switch (n) {
+                case 0:return '0'
+                case 1:return '1'
+                case 2:return '2'
+                case 3:return '3'
+                case 4:return '4'
+                case 5:return '5'
+                case 6:return '6'
+                case 7:return '7'
+                case 8:return '8'
+                case 9:return '9'
+            }
+        }
+
     </script>
 
     <script type="xx" id="lcf&lcm">
@@ -1223,9 +1248,43 @@
         console.log(m*n/x)
 
     </script>
-    <script type="" id="weekday">
-        var x = +prompt(),
-            y = +prompt()
+    <script type=xx" id="weekday">
+        var m = +prompt(), //月份
+            y = +prompt(), //年份
+            d
+        if(m == 1 || m == 2){
+            m += 12
+            y--
+        }
+        var iWeek = (d + 2*m + 3*(m + 1) / 5 + y + y / 4 - y/100 + y/400) % 7)
+        switch (iWeek) {
+            case 0:
+                console.log('星期日')
+                break;
+            case 1:
+                console.log('星期一')
+                break;
+            case 2:
+                console.log('星期二')
+                break;
+            case 3:
+                console.log('星期三')
+                break;
+            case 4:
+                console.log('星期四')
+                break;
+            case 5:
+                console.log('星期五')
+                break;
+            case 6:
+                console.log('星期六')
+                break;
+
+            default:
+                break;
+        }
+        var
+
     
     </script>
 

@@ -143,63 +143,7 @@ var luckyxuyaoyao = {
 
     },
     
-    /**
-     * 
-     */
-    nth:function(){
-
-    },
-
-    /**
-     * 
-     */
-    pull:function(){
-
-    },
-
-    /**
-     * 
-     */
-    pullAll:function(){
-
-    },
-
-    /**
-     * 
-     */
-    pullAt:function(){
-
-    },
-
-    /**
-     * 
-     */
-    remove:function(){
-
-    },
-
-    /**
-     * 
-     */
-    reverse:function(){
-
-    },
-
-    /**
-     * 
-     */
-    reverse:function(){
-
-    },
-
-    /**
-     * 
-     */
-    slice:function(){
-
-    },
-    
-    
+   
     
     
     

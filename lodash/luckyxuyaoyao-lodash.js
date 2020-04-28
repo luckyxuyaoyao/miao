@@ -5,7 +5,7 @@ var luckyxuyaoyao = {
      * @param {*} val 
      */
     isNull:function(val){
-        if(val == null || val == undefined){
+        if(val === null){
             return true
         }else{
             return false

@@ -42,7 +42,7 @@ var luckyxuyaoyao = {
     compact:function(array){
         let res = []
         for(var i = 0; i < array.length; i++){
-            if(array[i] !== '0'|| array[i] !== 'null' || array[i] !== 'undefined' || array[i] !== 'NaN' || array[i] !== '' || array[i] !== 'false'){
+            if(array[i]){
                 res.push(array[i])
             }
         }
@@ -52,7 +52,7 @@ var luckyxuyaoyao = {
    
 
 
-    
+
 }
 
 

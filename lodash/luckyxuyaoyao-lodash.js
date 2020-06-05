@@ -60,17 +60,20 @@ var luckyxuyaoyao = {
     },
 
     /**
-     * 
+     * @param {*} array
+     
      */
-    difference:function(){
-
+    difference:function(array1,array2){
+        
+    
     },
 
     /**
-     * 
+     * @param {*} array
+     * @param {*} number
      */
-    drop:function(){
-
+    drop:function(ary,n){
+        return ary.slice(n,ary.length)
     },
 
     /**

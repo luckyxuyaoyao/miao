@@ -138,23 +138,13 @@ var luckyxuyaoyao = {
         return result
     },
 
-    /**
-     * 
-     */
-    indexOf:function(){
-
+    
+    
+    initial:function(array){
+       return array.slice(0,array.length - 1)
     },
     
-    /**
-     * 
-     */
-    initial:function(){
-
-    },
     
-    /**
-     * 
-     */
     intersection:function(){
 
     },
@@ -163,14 +153,14 @@ var luckyxuyaoyao = {
      * 
      */
     join:function(){
-
+        
     },
 
     /**
      * 
      */
-    last:function(){
-
+    last:function(array){
+        return array[array.length - 1]
     },
 
     /**
@@ -180,7 +170,17 @@ var luckyxuyaoyao = {
 
     },
     
-   
+    /**
+     * 
+     */
+    nth :function(array,n){
+        if(n>=0){
+            return array[n-1]
+        }else{
+            return array[n+array.length]
+        }
+    },
+    
     
     
     

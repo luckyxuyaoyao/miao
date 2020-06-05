@@ -83,27 +83,61 @@ var luckyxuyaoyao = {
 
     },
     
+    
     /**
-     * 
+     * @param {*} array
      */
-    find:function(){
-
+    first:function(array){
+        if(array == []){
+            return undefined
+        }else{
+            return array[0]
+        }
     },
     
     /**
      * 
      */
-    first:function(){
+    flatten:function(ary){
+        var result = []
+        for(var item of ary){
+            if(Array.isArray(item)){
+                for(var val of item){
+                    result.push(val)
+                }
+            }else{
+                result.push(item)
+            }
+        }
+        return result
+    },
 
+    flattenDeep:function(ary){
+        var result = []
+        for(var item of ary){
+            if(Array.isArray(item)){
+                var flatdeep = flattenDeep(item)
+                result.push(...flatdeep)
+            }else{
+                result.push(item)
+            }
+        }
+        return result
     },
     
-    /**
-     * 
-     */
-    flatten:function(){
-
+    flattenDepth:function(ary,depth){
+        var result = []
+        for(var item of ary){
+            if(Array.isArray(item)){
+                var flatdepth = flattenDepth(item,depth -1)
+                result.push(...flatdepth)
+            }else{
+                result.push(item)
+            }
+        }
+        return result
     },
-    
+
     /**
      * 
      */

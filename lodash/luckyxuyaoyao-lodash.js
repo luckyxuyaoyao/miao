@@ -173,13 +173,29 @@ var luckyxuyaoyao = {
     /**
      * 
      */
-    nth :function(array,n){
+    nth:function(array,n){
         if(n>=0){
             return array[n-1]
         }else{
             return array[n+array.length]
         }
     },
+
+    
+    pull:function(ary,a,b){
+        var result = []
+        for(var i = 0 ; i < ary.length;i++){
+            if(ary[i] != a && ary[i] != b ){
+                result.push(ary[i])
+                
+            }ary.shift()
+            i--
+        }
+        
+        return result 
+
+    },
+    
     
     
     

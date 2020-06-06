@@ -235,7 +235,7 @@ var luckyxuyaoyao = {
 
     takeRight:function(ary,n){
         if(n == undefined){
-            return ary[ary.length - 1]
+            return [ary[ary.length - 1]]
         }else{
             if(n <= ary.length){
                 return ary.slice(ary.length - n ,ary.length )
@@ -252,6 +252,37 @@ var luckyxuyaoyao = {
         console.log(unique(arr))
     },
 
+    unzip:function(arr){
+
+    },
+
+    without:function(arr){
+
+    },
+    
+    xor:function(arr){
+
+    },
+    
+    zip:function(arr){
+
+    },
+    
+    zipObject:function(arr){
+
+    },
+    
+    includes:function(arr){
+
+    },
+    
+    sample:function(arr){
+
+    },
+    
+    sampleSize:function(arr){
+
+    },
     
     
     

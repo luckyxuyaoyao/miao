@@ -63,9 +63,24 @@ var luckyxuyaoyao = {
      * @param {*} array
      
      */
-    difference:function(array1,array2){
-        
-    
+    difference:function(array, ...values){
+        let map = {}
+        let count = []
+        let index = 0
+        while (index < arguments.length) {
+          for (let i = 0; i < arguments[index].length; i++) {
+            if (!(arguments[index][i] in map)) {
+              map[arguments[index][i]] = 1
+            }
+          }
+          index++
+        }
+        for (let j = 0; j < array.length; j++) {
+          if (!(array[j] in map)) {
+            count.push(array[j])
+          }
+        }
+        return count
     },
 
     /**
@@ -149,12 +164,7 @@ var luckyxuyaoyao = {
 
     },
     
-    /**
-     * 
-     */
-    join:function(){
-        
-    },
+    
 
     /**
      * 
@@ -163,18 +173,12 @@ var luckyxuyaoyao = {
         return array[array.length - 1]
     },
 
-    /**
-     * 
-     */
-    lastIndexOf:function(){
-
-    },
-    
-    /**
-     * 
-     */
+   
     nth:function(array,n){
-        if(n>=0){
+        if(n = 0){
+            return array[0]
+        }
+        else if(n>0){
             return array[n-1]
         }else{
             return array[n+array.length]
@@ -191,10 +195,55 @@ var luckyxuyaoyao = {
             }ary.shift()
             i--
         }
-        
         return result 
 
     },
+
+    reverse:function(ary){
+        var result = []
+        for(var i = ary.length; i > 0 ; i--){
+            result.push(ary[i])
+        }
+        return result
+    },
+
+    slice:function(ary,start,end){
+        
+    },
+
+    sortedIndex:function(ary,val){
+        for(var i =0; i < ary.length;i++){
+            if(val >= ary[i]){
+                let a = i
+            }
+        }
+        return a
+    },
+
+    sortedIndexOf:function(ary){
+        
+    },
+
+    tail:function(ary){
+        
+    },
+
+    take:function(ary){
+        
+    },
+
+    takeRight:function(ary){
+        
+    },
+
+    union:function(ary){
+        
+    },
+
+    uniq:function(ary){
+        
+    },
+    
     
     
     

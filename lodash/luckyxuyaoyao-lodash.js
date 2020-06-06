@@ -212,29 +212,37 @@ var luckyxuyaoyao = {
     },
 
     sortedIndex:function(ary,val){
-        var a = 0
-        for(var i =0; i < ary.length;i++){
-            if(val >= ary[i]){
-                 a = i
-            }
-        }
-        return a
+       
     },
 
-    sortedIndexOf:function(ary){
-        
-    },
 
     tail:function(ary){
-        
+        ary.shift(ary[0])
+        return ary
     },
 
-    take:function(ary){
-        
+    take:function(ary,n){
+        if(n == undefined){
+            return ary[0]
+        }else{
+            if(n <= ary.length){
+                return ary.slice(0,n)
+            }else{
+                return ary
+            }
+        }
     },
 
-    takeRight:function(ary){
-        
+    takeRight:function(ary,n){
+        if(n == undefined){
+            return ary[ary.length - 1]
+        }else{
+            if(n <= ary.length){
+                return ary.slice(ary.length - n ,ary.length )
+            }else{
+                return ary
+            }
+        }
     },
 
     union:function(ary){

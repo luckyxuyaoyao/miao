@@ -201,7 +201,7 @@ var luckyxuyaoyao = {
 
     reverse:function(ary){
         var result = []
-        for(var i = ary.length; i > 0 ; i--){
+        for(var i = ary.length - 1; i >= 0 ; i--){
             result.push(ary[i])
         }
         return result
@@ -212,9 +212,10 @@ var luckyxuyaoyao = {
     },
 
     sortedIndex:function(ary,val){
+        var a = 0
         for(var i =0; i < ary.length;i++){
             if(val >= ary[i]){
-                let a = i
+                 a = i
             }
         }
         return a

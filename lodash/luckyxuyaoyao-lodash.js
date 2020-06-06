@@ -223,7 +223,7 @@ var luckyxuyaoyao = {
 
     take:function(ary,n){
         if(n == undefined){
-            return ary[0]
+            return [ary[0]]
         }else{
             if(n <= ary.length){
                 return ary.slice(0,n)
@@ -245,13 +245,13 @@ var luckyxuyaoyao = {
         }
     },
 
-    union:function(ary){
-        
+    union:function(arr){
+        return arr.filter(function(item, index, arr) {
+        return arr.indexOf(item, 0) === index;
+    })
+        console.log(unique(arr))
     },
 
-    uniq:function(ary){
-        
-    },
     
     
     

@@ -278,15 +278,21 @@ var luckyxuyaoyao = {
         }
         without(a, result)
         without(b, result)
-        for (var x = 0; x < b.length; x++) { a.push(b[x]}
+        for (var x = 0; x < b.length; x++) { a.push(b[x])}
         return a
-
-
     },
 
-    zip: function (arr) {
-
-    },
+    zip: function (...arr) {
+        let result = []
+        
+        arr.forEach(item => {
+          item.forEach((val, index)=> {
+            let a = result[index] = result[index] || []
+            a.push(val)
+          })
+        })
+        return result
+      },
 
     zipObject: function (arr) {
 

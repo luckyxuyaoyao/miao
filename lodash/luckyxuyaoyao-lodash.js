@@ -252,12 +252,16 @@ var luckyxuyaoyao = {
         console.log(unique(arr))
     },
 
-    unzip:function(arr){
-
-    },
-
-    without:function(arr){
-
+    without:function(arr,brr){
+        for(var i=0;i<brr.length;i++){
+            for(var j=0;j<arr.length;j++){
+                if(arr[j]==brr[i]){
+                    arr.splice(j,1);
+                    j=j-1;
+                }
+            }
+        }
+        return arr;
     },
     
     xor:function(arr){

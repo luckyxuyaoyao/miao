@@ -42,23 +42,7 @@ var luckyxuyaoyao = {
 
   
     difference: function (array, ...values) {
-        let map = {}
-        let count = []
-        let index = 0
-        while (index < arguments.length) {
-            for (let i = 0; i < arguments[index].length; i++) {
-                if (!(arguments[index][i] in map)) {
-                    map[arguments[index][i]] = 1
-                }
-            }
-            index++
-        }
-        for (let j = 0; j < array.length; j++) {
-            if (!(array[j] in map)) {
-                count.push(array[j])
-            }
-        }
-        return count
+        
     },
 
     drop: function (ary, n) {
@@ -74,7 +58,6 @@ var luckyxuyaoyao = {
             return array[0]
         }
     },
-
    
     flatten: function (ary) {
         var result = []
@@ -125,7 +108,6 @@ var luckyxuyaoyao = {
         return array[array.length - 1]
     },
 
-
     nth: function (array, n) {
         if (n = 0) {
             return array[0]
@@ -157,14 +139,6 @@ var luckyxuyaoyao = {
             result.push(ary[i])
         }
         return result
-    },
-
-    slice: function (ary, start, end) {
-
-    },
-
-    sortedIndex: function (ary, val) {
-
     },
 
     head: function (array) {
@@ -265,17 +239,6 @@ var luckyxuyaoyao = {
         return array.length > n ? array.slice(0, array.length - n) : [];
     },
 
-    includes: function (arr) {
-
-    },
-
-    sample: function (arr) {
-
-    },
-
-    sampleSize: function (arr) {
-
-    },
     
 
 

@@ -116,8 +116,6 @@ var luckyxuyaoyao = {
         return result
     },
 
-
-
     initial: function (array) {
         return array.slice(0, array.length - 1)
     },
@@ -265,7 +263,7 @@ var luckyxuyaoyao = {
 
     dropRight: function (array, n = 1) {
         return array.length > n ? array.slice(0, array.length - n) : [];
-    }
+    },
 
     includes: function (arr) {
 
@@ -278,10 +276,7 @@ var luckyxuyaoyao = {
     sampleSize: function (arr) {
 
     },
-    isMatch function (arr) {
-
-    },
-
+    
 
 
 

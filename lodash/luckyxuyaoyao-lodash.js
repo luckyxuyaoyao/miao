@@ -1,9 +1,6 @@
 
 var luckyxuyaoyao = {
-    /**
-     * 
-     * @param {*} val 
-     */
+
     isNull: function (val) {
         if (val === null) {
             return true
@@ -12,10 +9,6 @@ var luckyxuyaoyao = {
         }
     },
 
-    /**
-     * 
-     * @param {*} val 
-     */
     isNaN: function (val) {
         if (val !== val) {
             return true
@@ -24,10 +17,6 @@ var luckyxuyaoyao = {
         }
     },
 
-    /**
-    * @param {*} array
-    * @param {*} size
-    */
     chunk: function (array, size) {
         let ary = []
         for (var i = 0; i < array.length; i += size) {
@@ -36,9 +25,6 @@ var luckyxuyaoyao = {
         return ary
     },
 
-    /**
-     * @param {*} array
-     */
     compact: function (array) {
         let res = []
         for (var i = 0; i < array.length; i++) {
@@ -49,20 +35,12 @@ var luckyxuyaoyao = {
         return res
     },
 
-
-    /**
-     * @param {*} array
-     * @param {...val} [values]
-     */
     concat: function (array, ...val) {
         array = array.concat(...val)
         return array
     },
 
-    /**
-     * @param {*} array
-     
-     */
+  
     difference: function (array, ...values) {
         let map = {}
         let count = []
@@ -83,25 +61,12 @@ var luckyxuyaoyao = {
         return count
     },
 
-    /**
-     * @param {*} array
-     * @param {*} number
-     */
     drop: function (ary, n) {
         return ary.slice(n, ary.length)
     },
 
-    /**
-     * 
-     */
-    fill: function () {
-
-    },
 
 
-    /**
-     * @param {*} array
-     */
     first: function (array) {
         if (array == []) {
             return undefined
@@ -110,9 +75,7 @@ var luckyxuyaoyao = {
         }
     },
 
-    /**
-     * 
-     */
+   
     flatten: function (ary) {
         var result = []
         for (var item of ary) {
@@ -160,15 +123,6 @@ var luckyxuyaoyao = {
     },
 
 
-    intersection: function () {
-
-    },
-
-
-
-    /**
-     * 
-     */
     last: function (array) {
         return array[array.length - 1]
     },
@@ -215,6 +169,10 @@ var luckyxuyaoyao = {
 
     },
 
+    head: function (array) {
+        if (array === []) return undefined;
+        return array[0];
+    },
 
     tail: function (ary) {
         ary.shift(ary[0])
@@ -284,7 +242,7 @@ var luckyxuyaoyao = {
 
     zip: function (...arr) {
         let result = []
-        
+
         arr.forEach(item => {
           item.forEach((val, index)=> {
             let a = result[index] = result[index] || []
@@ -294,9 +252,20 @@ var luckyxuyaoyao = {
         return result
       },
 
-    zipObject: function (arr) {
-
+    unzip:  function (array) {
+        var result = [];
+        for (var i = 0; i < array[0].length; i++) {
+            result[i] = [];
+            for (var j = 0; j < array.length; j++) {
+                result[i][j] = array[j][i]
+            }
+        }
+        return result;
     },
+
+    dropRight: function (array, n = 1) {
+        return array.length > n ? array.slice(0, array.length - n) : [];
+    }
 
     includes: function (arr) {
 
@@ -307,6 +276,9 @@ var luckyxuyaoyao = {
     },
 
     sampleSize: function (arr) {
+
+    },
+    isMatch function (arr) {
 
     },
 

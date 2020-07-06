@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标轨迹</title>
+    <style>
+        .fire {
+            position:fixed;
+            background-color: blueviolet;
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="fire"></span>
+    <span class="fire"></span>
+    <span class="fire"></span>
+    <span class="fire"></span>
+
+    <script>
+        var fires = document.querySelectorAll(".fire")
+        var mx = innerWidth / 2   //鼠标初始位置
+        var my = innerHeight / 2
+        requestAnimationFrame(function animation(time) {
+
+            for (var i = 0; i < fires.length; i++) {
+                var fire = fires[i]
+                var angle = time * 0.01 + i * 2 * Math.PI / fires.length  //PI是弧度制的π，Math.PI = 3.14 = 180°
+                fire.style.left = mx + Math.sin(angle) * 100 - 10 + 'px'
+                fire.style.top = my + Math.cos(angle) * 100 - 10 + 'px'
+            }
+
+            requestAnimationFrame(animation)
+        })
+
+        //拿到鼠标的位置
+        addEventListener('mousemove', e => {
+            mx = e.clientX
+            my = e.clientY
+        })
+    </script>
+</body>
+
+</html>

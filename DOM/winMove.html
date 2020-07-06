@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body {
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 0;
+        }
+
+        .one {
+            background-color: rgb(226, 43, 113);
+            top: 0px;
+        }
+
+        .two {
+            background-color: orange;
+            top: 100px;
+        }
+
+        .three {
+            background-color: rgb(145, 135, 235);
+            top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    
+
+    <script>
+        var startX, startY, diffX, diffY
+        var zid = 1
+        //出来的是一个类数组，需要用forEach遍历
+        var rect = document.querySelectorAll('div')
+        rect.forEach(it => it.addEventListener('mousedown', function (e) {
+            startX = e.pageX
+            startY = e.pageY
+
+            if (e.target.matches('div')) {
+                diffX = startX - e.target.offsetLeft
+                diffY = startY - e.target.offsetTop
+                it.style.zIndex = zid
+                zid++
+            }
+            addEventListener('mousemove', function move(e) {
+                if (e.which != 1) {
+                    removeEventListener('mousemove', move)
+                } else {
+                    // it.style.zIndex = 999
+                    var clientX = e.clientX
+                    var clientY = e.clientY
+                    it.style.left = clientX - diffX + 'px'
+                    it.style.top = clientY - diffY + 'px'
+
+                }
+            })
+        })
+        )
+
+
+    </script>
+</body>
+
+</html>

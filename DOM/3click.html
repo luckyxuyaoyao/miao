@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标双击，三击</title>
+
+</head>
+
+<body>
+	<button>
+		click
+	</button>
+</body>
+<script>//三击之前足够久，最近的三次单击足够近
+	var lastTime = 0
+	var detail = 1
+	var button = document.querySelector("button")
+	button.addEventListener("click", function (event) {
+		var time = Date.now()
+		if(time - lastTime < 500){
+			detail++
+		}else{
+			detail = 1
+		}
+
+		if(detail == 2){
+			console.log("double click")
+		}
+		if(detail == 3){
+			console.log("tripple click")
+		}
+
+		lastTime = time
+		
+		// var date = new Date().getTime(),
+		// 	lastTime = 0,
+		// 	count = 0
+		// if (date - lastTime < 300) {
+		// 	count++
+		// 	console.log("button clicked")
+		// }
+		// lastTime = date
+		
+	})
+</script>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>键盘审查</title>
+</head>
+<body> // 不能输入Q,W,X几个大写字母
+    <input type="text">
+    <script>
+        var input = document.querySelector('input')
+        input.addEventListener('keypress',e => {
+            console.log(e)
+            if(e.keyCode == 81 || e.keyCode == 87 || e.keyCode == 88){
+                e.preventDefault()
+            }
+        })
+    </script>
+</body>
+</html>

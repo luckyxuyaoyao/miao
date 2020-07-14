@@ -1,0 +1,25 @@
+<button>Show Cats!</button>
+<script>
+    // https://xieranmaya.github.io/images/cats/cats.json
+    // https://xieranmaya.github.io/images/cats/photo-103450229.jpg
+
+    var btn = document.querySelector('button')
+
+    btn.addEventListener("click", event => {
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://xieranmaya.github.io/images/cats/cats.json", false)
+        xhr.send()
+
+        xhr.onload = function () {
+            var cats = JSON.parse(xhr.responseText)
+            for (var cat of cats) {
+                var img = document.createElement('img')
+                img.src = 'https://xieranmaya.github.io/images/cats/' + cat.url
+                img.onload()
+                document.body.appendChild(img)
+            }
+        }
+
+    })
+</script>
